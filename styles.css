@@ -202,39 +202,84 @@ nav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: var(--white);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 25px 8px 25px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 16px;
   color: #818181;
   display: block;
   transition: 0.3s;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 0;
   font-size: 36px;
-  margin-left: 50px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.sidenav .dropdown-content {
+  display: block;
+  position: relative;
+  background-color: var(--white);
+  width: fit-content;
+  box-shadow: none;
+  z-index: 0;
+  border-radius: 6px;
+  padding: 0px 10px 20px 40px;
+}
+
+.sidenav .pl-30 {
+  padding-left: 30px;
+}
+
+.sidenav .dropdown-content .item-title {
+  font-size: 16px;
+}
+
+.sidenav i {
+  margin-top: -3px;
+  margin-left: 8px;
+  transform: scale(0.7);
+  transition: all 0.2s ease-in-out;
+}
+
+.sidenav .btn-outline-secondary {
+  padding: 10px 15px;
+}
+
+a[aria-expanded="true"] i {
+  margin-left: 8px;
+  transform: scale(0.7) rotate(180deg) translateY(-4px);
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+  transition: all 0.3s ease-in-out;
 }
 /* sidenav */
 
